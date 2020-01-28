@@ -19,9 +19,14 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@fullcalendar/core": "^4.3.1",
+    "@fullcalendar/resource-timegrid": "^4.3.0",
+    "@syncfusion/ej2-angular-schedule": "^17.4.43",
+    "bootstrap": "^4.4.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "@syncfusion/ej2-material-theme": "~17.4.41"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.21",
