@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { TimeScaleModel, EventSettingsModel, TimelineViewsService } from '@syncfusion/ej2-angular-schedule';
 import { scheduleData } from './datasource';
 import { CalendarService } from '../calendar.service';
+import { Observable, of } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-calendar',
@@ -19,11 +21,12 @@ export class CalendarComponent implements OnInit{
   scheduleData: Object[];
   constructor(private svc:CalendarService){}
   ngOnInit(){
-    this.svc.getData().subscribe(scheduleData=> this.scheduleData=scheduleData);
+    this.svc.getData().subscribe(data=> this.scheduleData=data);
   };
+
   
   public selectedDate: Date = new Date();
   public timeScaleOptions: TimeScaleModel = { enable: true, slotCount: 2 };
-  public eventSettings: EventSettingsModel = { dataSource: scheduleData};
+  public eventSettings: EventSettingsModel = { dataSource : this.scheduleData};
 }
 
