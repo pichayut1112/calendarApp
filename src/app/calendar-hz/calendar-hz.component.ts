@@ -19,6 +19,6 @@ import { tap } from 'rxjs/operators';
 })
 export class CalendarHZComponent {
   public selectedDate: Date = new Date();
-  public eventSettings: EventSettingsModel = { dataSource: scheduleData };
+  //public eventSettings: EventSettingsModel = { dataSource: scheduleData };
 
 }

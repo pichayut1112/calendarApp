@@ -16,14 +16,14 @@ import { CalendarService } from '../calendar.service';
 })
 
 export class CalendarComponent implements OnInit{
+  scheduleData: Object[];
   constructor(private svc:CalendarService){}
   ngOnInit(){
     this.svc.getData().subscribe(scheduleData=> this.scheduleData=scheduleData);
-  }
-;
-scheduleData: Object[]
+  };
+  
   public selectedDate: Date = new Date();
   public timeScaleOptions: TimeScaleModel = { enable: true, slotCount: 2 };
-  public eventSettings: EventSettingsModel = { dataSource: this.scheduleData};
+  public eventSettings: EventSettingsModel = { dataSource: scheduleData};
 }
 
