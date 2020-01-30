@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'calendar-app-project';
+
+  showButton:boolean=true;
+  switch(param){
+    this.showButton=param;
+  }
 }
