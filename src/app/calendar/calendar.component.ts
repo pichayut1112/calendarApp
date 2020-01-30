@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TimeScaleModel, EventSettingsModel, TimelineViewsService } from '@syncfusion/ej2-angular-schedule';
 import { scheduleData } from './datasource';
+import { CalendarService } from '../calendar.service';
 
 @Component({
   selector: 'app-calendar',
@@ -14,10 +15,15 @@ import { scheduleData } from './datasource';
   styleUrls: ['./calendar.component.css']
 })
 
-export class CalendarComponent {
-
+export class CalendarComponent implements OnInit{
+  constructor(private svc:CalendarService){}
+  ngOnInit(){
+    this.svc.getData().subscribe(scheduleData=> this.scheduleData=scheduleData);
+  }
+;
+scheduleData: Object[]
   public selectedDate: Date = new Date();
   public timeScaleOptions: TimeScaleModel = { enable: true, slotCount: 2 };
-  public eventSettings: EventSettingsModel = { dataSource: scheduleData };
+  public eventSettings: EventSettingsModel = { dataSource: this.scheduleData};
 }
 
