@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TimeScaleModel, EventSettingsModel, TimelineViewsService } from '@syncfusion/ej2-angular-schedule';
-import { scheduleData } from './datasource';
+import { scheduleData } from '../datasource';
 import { CalendarService } from '../calendar.service';
 import { Observable, of } from 'rxjs';
 

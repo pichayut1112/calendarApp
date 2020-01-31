@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EventSettingsModel, TimelineViewsService, TimelineMonthService } from '@syncfusion/ej2-angular-schedule';
-import { scheduleData } from '../calendar/datasource';
+import { scheduleData } from '../datasource';
 import { of, Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
