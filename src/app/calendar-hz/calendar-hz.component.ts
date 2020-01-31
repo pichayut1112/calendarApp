@@ -14,8 +14,7 @@ import { tap } from 'rxjs/operators';
   <e-views>
       <e-view option='TimelineDay'  dateFormat='dd / MMMM / yyyy' ></e-view>
   </e-views>
-</ejs-schedule>`,
-  styleUrls: ['./calendar-hz.component.css']
+</ejs-schedule>`
 })
 export class CalendarHZComponent {
   public selectedDate: Date = new Date();
