@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EventSettingsModel, TimelineViewsService, TimelineMonthService } from '@syncfusion/ej2-angular-schedule';
 import { scheduleData } from '../datasource';
-import { of, Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-calendar-hz',
