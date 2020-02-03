@@ -6,9 +6,8 @@ import { ButtonComponent } from '@syncfusion/ej2-angular-buttons';
   template: `
   <nav class="p-3 mb-2 bg-primary text-white"  align = 'center'>Calendar</nav>
   <button #togglebtn ejs-button cssClass="e-flat" iconCss="e-btn-sb-icon e-play-icon" [isToggle]="true" content="Calendar V"></button>         
-          <div  *ngIf="showDiv"><app-calendar></app-calendar></div>
-          <div *ngIf="!showDiv"><app-calendar-hz></app-calendar-hz></div>
-  <div class="container"></div>`
+          <div *ngIf="showDiv" style="background-color:lightblue"><app-calendar></app-calendar></div>
+          <div *ngIf="!showDiv"><app-calendar-hz></app-calendar-hz></div> `
 })
 export class AppComponent {
   title = 'calendar-app-project';

@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-calendar',
-  template:  `<div>{{scheduleData}}</div>
+  template:  `
   <ejs-schedule width='100%' height='550px' currentView="Day" [selectedDate]="selectedDate" [eventSettings]="eventSettings" >
   <e-views>
   <e-view option='Day' dateFormat='dd / MMMM / yyyy' [timeScale]="timeScaleOptions"></e-view>
@@ -21,11 +21,8 @@ export class CalendarComponent implements OnInit{
   //   this.svc.getData().subscribe(data=> this.data=data);
   // };
   ngOnInit() {
-    this.http.get('src/app/datasource.ts').subscribe(data => {
-      this.scheduleData = data;
-    });    
-  }
-  data: Object[];
+    this.http.get('src/app/datasource.ts').subscribe(data => this.scheduleData = data);    
+  };
   
   public selectedDate: Date = new Date();
   public timeScaleOptions: TimeScaleModel = { enable: true, slotCount: 2 };
